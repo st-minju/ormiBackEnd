@@ -1,0 +1,251 @@
+*{
+    font-family: "Gmarket Sans";
+    font-size: 24px;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+html {
+    background-color:rgba(91, 35, 134, 1);
+}
+body{
+    position: relative;
+    left: 578px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#clock_image{
+    position: relative;
+    top: 120px;
+    z-index: 1;
+}
+#name_logo{
+    width: 564px;
+    height: 112px;
+    position: relative;
+    bottom: 65px;
+    z-index: 10;
+}
+#practice{
+    /* “연습은 어제의 당신보다 당신을 더 낫게 만든다.” */
+    position: relative;
+    width: 486px;
+    height: 40px;
+    top: 50px;
+    margin: 0;
+    font-family: 'tvN Enjoystories';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #F5DF4D;
+
+}
+#theory::before {
+    /* “ */
+    display: inline-block;
+
+    position: absolute;
+    height: 96px;
+    left: -60px;
+    top: 20px;
+
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 96px;
+    color: rgba(252, 238, 33, 0.3);
+
+    content: '‘‘';
+    letter-spacing: 1px;
+}
+#theory {
+    /* 1만 시간의 법칙은 어떤 분야의 전문가가 되기 위해서는 최소한 1만 시간의 훈련이 필요하다는 법칙이다. */
+    position: relative;
+    height: 85px;
+    top: 125px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#theory span {
+    font-size: 18px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+#theory > div > span:first-child {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+}
+#theory::after {
+    /* ” */
+    display: inline-block;
+
+    position: absolute;
+    height: 96px;
+    top: 20px;
+    right: -60px;
+
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 96px;
+    color: rgba(252, 238, 33, 0.3);
+
+    content: '’’';
+    letter-spacing: 1px;
+}
+form {
+    position: relative;
+    top: 255px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form > p {
+    margin: 0;
+}
+#job {
+    margin-bottom: 27px;
+}
+#time {
+    margin-bottom: 115px;
+}
+form > svg {
+    position: relative;
+    width: 64px;
+    height: 72px;
+    bottom: 41px;
+    left: 320px;
+}
+input {
+    width: 228px;
+    height: 57px;
+    border-radius: 7px;
+    border: 0;
+    margin: 0px 17px;
+    padding: 0;
+    background: rgba(255, 255, 255, 1);
+}
+input::placeholder {
+    color: rgba(186, 188, 190, 1);
+    text-align: center;
+
+}
+.button {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    padding: 21px 49px;
+
+    background: #FCEE21;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    border: none;
+
+    font-weight: 700;
+    color: #5B2386;
+}
+#about_me{
+    /*나는 며칠 동안 훈련을 해야 1만 시간이 될까?*/
+    width: 565px;
+    height: 66px;
+    padding-right: 0;
+}
+#result {
+    position: relative;
+    top: 335px;
+    min-width: 663px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#result > p {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}
+.big_word {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 72px;
+    margin: 0px 12px;
+    padding: 17px 0px;
+}
+ul {
+    list-style: none;
+    display: flex;
+    width: 663px;
+    height: 66px;
+    position: relative;
+    top: 415px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+#training{
+    /* 훈련하러 가기 GO!GO! */
+    height: 24px;
+    text-decoration: none;
+    margin-right: 18px;
+    /*// On click*/
+/*// Open overlay: "화이팅";*/
+/*// Animate: Instant;*/
+/*    animation-duration: 0ms;*/
+
+}
+#share{
+    background: rgba(255, 255, 255, 1);
+
+    width: 93px;
+    height: 24px;
+    text-decoration: none;
+}
+#weniv_logo{
+    position: relative;
+    top: 510px;
+}
+#copyright{
+    /* ※ 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다. 수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다. */
+    position: relative;
+    width: 365px;
+    height: 34px;
+    top: 530px;
+    padding-bottom: 70px;
+    margin: 0;
+
+    font-family: "Noto Sans CJK KR Regular", "Noto Sans KR";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+
+@font-face {
+    font-family: "Gmarket Sans";
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'tvN Enjoystories';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
