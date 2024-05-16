@@ -1,0 +1,104 @@
+<script>
+    // push & pop
+    const arr = [1, 2, 3];
+    arr.push(4);
+    console.log(arr); // [1, 2, 3, 4]
+    arr.pop();
+    console.log(arr); // [1, 2, 3]
+
+    //shift 첫번째 요소 꺼내기 & unshift 첫번째 위치에 추가
+    const myArray = ["사과", "바나나", "수박"];
+    myArray.shift();
+    console.log(myArray);
+    myArray.unshift("오이", "배");
+    console.log(myArray);
+
+    // splice
+    const arr = [1, 2, 3];
+    arr.splice(1, 0, 4);
+    console.log(arr); // [1, 4, 2, 3]
+    arr.splice(2, 1, 5);
+    console.log(arr); // [1, 4, 5, 3]
+
+    // slice
+    const myArray = ["apple", "banana", "cherry", "durian", "elderberry"];
+    console.log(myArray.slice(1, 4));
+    console.log(myArray.slice());
+    console.log(myArray.slice(0, 10));
+
+    // sort 예제 - 사전식 정렬
+    const avengers = ['아이언맨', '스파이더맨', '헐크', '토르'];
+    console.log(avengers.sort());
+
+    // sort 예제 - 숫자 정렬
+    const num3 = [13, 9, 10];
+    num3.sort(function (a, b) {
+        console.log('a: ' + a, 'b: ' + b);
+        return a - b;
+    });
+
+    // forEach 예제
+    const avengers = ['spiderman', 'ironman', 'hulk', 'thor'];
+
+    const newAvengers = [];
+    avengers.forEach(function (item) {
+        newAvengers.push('💖' + item + '💖');
+    });
+
+    // map 예제
+    const arr = [1, 2, 3];
+    const newArr = arr.map(function (item, index) {
+        return item * index;
+    });
+
+    console.log(newArr);
+
+    // map 예제 the most
+    const data = [
+        {
+            "_id": "642ba3980785cecff3f39a8d",
+            "index": 0,
+            "age": 28,
+            "eyeColor": "green",
+            "name": "Annette Middleton",
+            "gender": "female",
+            "company": "KINETICA"
+        },
+        {
+            "_id": "642ba398d0fed6e17f2f50c9",
+            "index": 1,
+            "age": 37,
+            "eyeColor": "green",
+            "name": "Kidd Roman",
+            "gender": "male",
+            "company": "AUSTECH"
+        },
+        {
+            "_id": "642ba39827d809511d00dd8d",
+            "index": 2,
+            "age": 39,
+            "eyeColor": "brown",
+            "name": "Best Ratliff",
+            "gender": "male",
+            "company": "PRISMATIC"
+        }
+    ];
+
+    const ages = data.map((item) => item.age);
+
+    // filter 예제
+    const arr11 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const newArr = arr11.filter(el => el >= 6);
+
+    console.log(newArr);
+
+    // includes
+    const arr1 = ['hello', 'world', 'hojun']
+    arr1.includes('world')
+
+    const arr1 = ['hello', 'world', 'hojun']
+    arr1.includes('leehojun')
+
+    const arr1 = ['hello', 'world', 'hojun']
+    arr1.includes('jun')
+</script>
