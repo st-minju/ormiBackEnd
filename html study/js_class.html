@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        class me {
+            constructor() {
+                this.name = 'minju Kim';
+                this.job = 'home protecter';
+            }
+
+            change(recent) {
+                recent.goingUp();
+            }
+        }
+
+        class tall {
+            constructor() {
+                this.height = 160;
+            }
+
+            goingUp() {
+                this.height++;
+                console.log(this.height);
+            }
+        }
+
+        // let obj = new me;
+        // undefined
+        // let obj2 = new tall;
+        // undefined
+        // obj.change(obj2);
+        // 161
+        // undefined
+        // obj.change(obj2);
+        // 162
+    </script>
+</head>
+<body>
+<!--<button id="btn1" onclick="me.change(tall)">키 커진다 오예!</button>-->
+
+
+</body>
+</html>
