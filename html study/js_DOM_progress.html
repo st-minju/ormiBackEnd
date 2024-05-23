@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>나의 todo list</h1>
+<p>1. 오늘 저녁에는 부대찌게를 끓여 먹겠다.
+    <button type="button">삭제</button>
+</p>
+<p>2. 후식으로 슈팅스타를 먹겠다.
+    <button type="button">삭제</button>
+</p>
+<p>3. 자기 전에 반드시 내일 아침 메뉴를 생각해두겠다.
+    <button type="button">삭제</button>
+</p>
+
+<script>
+    let cont = document.querySelectorAll('p');
+    cont.forEach(function (el, index) {
+        cont[index].addEventListener('click', (event) => {
+            alert(cont[index].textContent.slice(0, -4));
+        })
+    })
+    let btn = document.querySelectorAll('button');
+    btn.forEach(function (el, index) {
+        btn[index].addEventListener('click', (event) => {
+            if (confirm('정말 삭제하시겠습니까?'))
+                btn[index].parentElement.remove();
+            // 위의 alert가 이뤄지지 않는다.
+            event.stopPropagation();
+        })
+    })
+</script>
+</body>
+</html>
