@@ -1,8 +1,7 @@
 public class Test {
 
 	/**
-	 * @param
-	 * @author
+	 * 2024-05-29
 	 */
 
 	public static void main(String[] args) {
