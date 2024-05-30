@@ -136,3 +136,5 @@ gradle-app.setting
 .classpath
 
 !/.idea/
+.idea/
+.out/
