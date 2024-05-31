@@ -3,7 +3,7 @@ import java.math.BigInteger;
 
 public class Test2 {
 
-  /** 2024-05-30 */
+  /** 2024-05-30 자료형 공부 */
   public static void main(String[] args) {
     // 정수형 자료형
     int a = 1;
