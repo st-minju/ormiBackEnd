@@ -1,28 +1,24 @@
 public class Test7 {
-  /** 2024-05-31 StringBuilder StringBuffer */
+
+  /** 2024-05-31 증감연산자 */
   public static void main(String[] args) {
-    String result = "";
+    int x = 5;
+    int y = 5;
+    System.out.println("전위 증가 연산자: " + (++x));
+    System.out.println("후위 증가 연산자: " + (y++));
 
-    result += "Hello ";
-    result += "Java ";
-    result += "World";
-    System.out.println(result);
+    System.out.println("==============");
+    System.out.println("x: " + x);
+    System.out.println("y: " + y);
 
-    // StringBuilder or StringBuffer는 String의 메모리 낭비를 보완하기 위해 사용
-    // 문자열을 수정 및 조작할 때 사용 권장
-
-    StringBuilder sb = new StringBuilder();
-    sb.append("Hello ");
-    sb.append("Java ");
-    sb.append("World");
-    System.out.println(sb);
-    sb.insert(0, "Hi ");
-    System.out.println(sb);
-
-    StringBuffer sf = new StringBuffer();
-    sf.append("Hello ");
-    sf.append("Java ");
-    sf.append("World");
-    System.out.println(sf);
+    System.out.println("==============");
+    int a = 100;
+    int b = 100;
+    System.out.println("전위 감소 연산자: " + (--a));
+    System.out.println("후위 감소 연산자: " + (b--));
+    System.out.println("전위 감소 연산자: " + (--a));
+    System.out.println("후위 감소 연산자: " + (b--));
+    System.out.println("전위 감소 연산자: " + (--a));
+    System.out.println("후위 감소 연산자: " + (b--));
   }
 }

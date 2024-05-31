@@ -1,24 +1,20 @@
 public class Test8 {
 
-  /** 2024-05-31 증감연산자 */
+  /** 2024-05-31 논리연산자 */
   public static void main(String[] args) {
-    int x = 5;
-    int y = 5;
-    System.out.println("전위 증가 연산자: " + (++x));
-    System.out.println("후위 증가 연산자: " + (y++));
+    boolean isRaining = true;
 
-    System.out.println("==============");
-    System.out.println("x: " + x);
-    System.out.println("y: " + y);
+    if (isRaining) {
+      System.out.println("하늘에서 비가 내려와요...");
+    } else if (!isRaining) {
+      System.out.println("김태희가 안와요...");
+    }
 
-    System.out.println("==============");
-    int a = 100;
-    int b = 100;
-    System.out.println("전위 감소 연산자: " + (--a));
-    System.out.println("후위 감소 연산자: " + (b--));
-    System.out.println("전위 감소 연산자: " + (--a));
-    System.out.println("후위 감소 연산자: " + (b--));
-    System.out.println("전위 감소 연산자: " + (--a));
-    System.out.println("후위 감소 연산자: " + (b--));
+    boolean isSunny = false;
+    if (!isSunny) {
+      System.out.println("밖에 날씨가 맑아요!");
+    } else if (isSunny) {
+      System.out.println("날씨가 우중충하네요...");
+    }
   }
 }

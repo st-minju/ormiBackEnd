@@ -1,12 +1,28 @@
 public class Test6 {
-
-  /** 2024-05-31 String */
+  /** 2024-05-31 StringBuilder StringBuffer */
   public static void main(String[] args) {
-    String name1 = "Tim";
-    int age1 = 30;
-    String name2 = "Anna";
-    int age2 = 45;
-    String.format("%s의 나이는 %s세 입니다.", name1, age1);
-    String.format("%s의 나이는 %s세 입니다.", name2, age2);
+    String result = "";
+
+    result += "Hello ";
+    result += "Java ";
+    result += "World";
+    System.out.println(result);
+
+    // StringBuilder or StringBuffer는 String의 메모리 낭비를 보완하기 위해 사용
+    // 문자열을 수정 및 조작할 때 사용 권장
+
+    StringBuilder sb = new StringBuilder();
+    sb.append("Hello ");
+    sb.append("Java ");
+    sb.append("World");
+    System.out.println(sb);
+    sb.insert(0, "Hi ");
+    System.out.println(sb);
+
+    StringBuffer sf = new StringBuffer();
+    sf.append("Hello ");
+    sf.append("Java ");
+    sf.append("World");
+    System.out.println(sf);
   }
 }
