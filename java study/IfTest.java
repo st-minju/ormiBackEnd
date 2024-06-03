@@ -1,4 +1,5 @@
 public class IfTest {
+  /** 2024-06-03 if문 */
   public static void main(String[] args) {
     /*   int a = 10;
       int b = 20;
@@ -25,7 +26,7 @@ public class IfTest {
     else System.out.println("F");
 
     int year = 2023;
-    if ((year % 4 == 0) && (!(year % 100 == 0) || (year % 400 == 0)))
+    if ((year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0)))
       System.out.println(year + "년은 윤년입니다.");
     else System.out.println(year + "년은 윤년이 아닙니다.");
 
