@@ -1,4 +1,4 @@
-public class Test7 {
+public class VariationOperator {
 
   /** 2024-05-31 증감연산자 */
   public static void main(String[] args) {

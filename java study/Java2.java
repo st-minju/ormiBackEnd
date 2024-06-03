@@ -1,7 +1,7 @@
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-public class Test2 {
+public class Java2 {
 
   /** 2024-05-30 자료형 공부 */
   public static void main(String[] args) {

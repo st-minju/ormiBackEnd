@@ -1,4 +1,4 @@
-public class Test8 {
+public class LogicOperator {
 
   /** 2024-05-31 논리연산자 */
   public static void main(String[] args) {

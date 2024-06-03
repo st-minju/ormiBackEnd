@@ -1,4 +1,4 @@
-public class Test {
+public class Java {
 
   /** 2024-05-29 출력 */
   public static void main(String[] args) {

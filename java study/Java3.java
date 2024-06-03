@@ -1,4 +1,4 @@
-public class Test6 {
+public class Java3 {
   /** 2024-05-31 StringBuilder StringBuffer */
   public static void main(String[] args) {
     String result = "";

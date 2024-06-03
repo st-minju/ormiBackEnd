@@ -1,4 +1,4 @@
-public class Test5 {
+public class StringTest {
 
   /** 2024-05-31 String */
   public static void main(String[] args) {
