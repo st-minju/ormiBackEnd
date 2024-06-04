@@ -1,7 +1,7 @@
 public class BooleanTest {
   /** 2024-06-03 boolean 연습 */
   public static void main(String[] args) {
-    boolean x = false, y = true, z = true;
+    boolean x = true, y = false, z = false;
     if (x && !y) {
       System.out.println("조건 1 충족");
     }
