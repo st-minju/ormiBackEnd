@@ -1,4 +1,4 @@
-public class CharTest {
+public class CharStudy {
 
   /** 2024-05-30 문자 자료형 */
   public static void main(String[] args) {

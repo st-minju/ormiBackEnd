@@ -1,4 +1,4 @@
-public class IfTest {
+public class IfStudy {
   /** 2024-06-03 if문 */
   public static void main(String[] args) {
     /*   int a = 10;

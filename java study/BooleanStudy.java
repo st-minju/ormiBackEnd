@@ -1,4 +1,4 @@
-public class BooleanTest {
+public class BooleanStudy {
   /** 2024-06-03 boolean 연습 */
   public static void main(String[] args) {
     boolean x = true, y = false, z = false;

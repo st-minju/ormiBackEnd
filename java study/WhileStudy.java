@@ -1,4 +1,4 @@
-public class WhileTest {
+public class WhileStudy {
   /** 2024-06-04 while문 */
   public static void main(String[] args) {
 

@@ -1,4 +1,4 @@
-public class SwitchTest {
+public class SwitchStudy {
 
   /** 2024-06-03 switch문 */
   public static void main(String[] args) {

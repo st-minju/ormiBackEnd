@@ -1,4 +1,4 @@
-public class InterfaceTest implements TestInterface {
+public class InterfaceStudy implements TestInterface {
 
   /** 2024-05-30 인터페이스 */
   public static void main(String[] args) {

@@ -1,4 +1,4 @@
-public class ForTest {
+public class ForStudy {
   /** 2024-06-04 for문 */
   public static void main(String[] args) {
 
@@ -39,7 +39,7 @@ public class ForTest {
       if (i % 2 == 0) System.out.println(i);
     }
 
-    int[] arr = new int[100];
+    ```int[] arr = new int[100];
     arr[0] = 1;
     arr[1] = 1;
     for (int i = 2; i < arr.length; i++) {
@@ -50,7 +50,7 @@ public class ForTest {
     System.out.println("피보나치 수열 출력 Go!");
     for (int i = 0; i < arr.length; i++) {
       System.out.println(arr[i]);
-    }*/
+    }```*/
 
     /*for (int i = 1; i <= 100; i++) {
       if (i == 50) break;
