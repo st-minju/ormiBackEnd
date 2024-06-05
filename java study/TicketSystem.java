@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class TicketSystem {
+  /** 2024-06-05 scanner class */
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("당신이 보고싶은 영화의 제목을 입력하세요!");
