@@ -27,5 +27,9 @@ public class ScannerStudy {
         System.out.println("잘못된 입력입니다!");
     }
     sc.close();
+    // Scanner 객체 생성
+    /*Scanner scanner = new Scanner(System.in);
+    int num = scanner.nextLine(); // 디버깅 단계에서 이미 오류남
+    double num2 = scanner.nextInt(); // InputMismatchException*/
   }
 }
