@@ -10,5 +10,16 @@ public class RepeatChar {
   static String repeatChar(String str) {
     if (str.length() < 1) return str;
     return "" + str.charAt(0) + str.charAt(0) + repeatChar(str.substring(1));
+
+    /*String result = "";
+
+    for(int i=0; i < str.length(); i++){
+     char theChar = str.charAt(i);
+     // result는 주소값, theChar은 유니코드를 가지고 있기 때문에
+     // 문자열로 출력하기 위해서는 형변환을 해주어야한다.
+     result += "" + theChar + theChar;
+    }
+
+    return result;*/
   }
 }
