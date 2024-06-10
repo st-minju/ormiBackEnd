@@ -4,7 +4,7 @@
  * <p>"When organizing items, always label each group with the appropriate category. category:
  * books, category: electronics, category: clothing, category: kitchenware, and so on. "
  */
-public class StringExtract {
+public class PrintCategory {
   public static void main(String[] args) {
     String str =
         "When organizing items, always label each group with the appropriate category. category: books, category: electronics, category: clothing, category: kitchenware, and so on. ";
@@ -33,7 +33,6 @@ public class StringExtract {
 
       int startIdx = idx + 9;
       int endIdx = str.indexOf(',', startIdx);
-
       System.out.println(str.substring(startIdx, endIdx));
 
       i = endIdx+1;
