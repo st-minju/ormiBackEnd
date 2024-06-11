@@ -18,24 +18,24 @@ public class Test {
     Scanner sc = new Scanner(System.in);
 
     // 계좌 생성
-    System.out.println("계좌번호를 입력하새요: ");
+    System.out.print("계좌번호를 입력하새요: ");
     String accountNumber = sc.nextLine();
-    System.out.println("소유자 이름을 입력하세요: ");
+    System.out.print("소유자 이름을 입력하세요: ");
     String ownerName = sc.nextLine();
-    System.out.println("게좌 비밀번호를 입력하세요: ");
+    System.out.print("게좌 비밀번호를 입력하세요: ");
     int password = sc.nextInt();
     sc.nextLine();
     BankAccount account = new BankAccount(accountNumber, ownerName, password);
 
     // 입금 및 출금
     account.deposit(1010000); // 예시 입금
-    System.out.println("게좌 비밀번호를 입력하세요: ");
+    System.out.print("게좌 비밀번호를 입력하세요: ");
     int passwordConfirm = sc.nextInt();
     account.withdraw(50000, passwordConfirm); // 예시 출금
-    System.out.println("게좌 비밀번호를 입력하세요: ");
+    System.out.print("게좌 비밀번호를 입력하세요: ");
     passwordConfirm = sc.nextInt();
     account.withdraw(100000000, passwordConfirm); // 예시 출금
-    System.out.println("게좌 비밀번호를 입력하세요: ");
+    System.out.print("게좌 비밀번호를 입력하세요: ");
     passwordConfirm = sc.nextInt();
     account.withdraw(30000, passwordConfirm); // 예시 출금
 
