@@ -1,3 +1,5 @@
+package JavaStudy0611;
+
 public class Person {
 
   String name;

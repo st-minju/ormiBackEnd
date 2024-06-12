@@ -1,16 +1,18 @@
+package JavaStudy0611;
+
 import java.util.Scanner;
 
 public class Test {
 
   public static void main(String[] args) {
-    /*Person person1 = new Person("김민주", 01021211212, 50000, 25);
+    /*JavaStudy0611.Person person1 = new JavaStudy0611.Person("김민주", 01021211212, 50000, 25);
     person1.sayHello();
     person1.sayMoney();
-    Person person2 = new Person("Molly", 01012122121, 500000000, 35);
+    JavaStudy0611.Person person2 = new JavaStudy0611.Person("Molly", 01012122121, 500000000, 35);
     person2.sayHello();
     person2.sayMoney();
 
-    Student student = new Student();
+    JavaStudy0611.Student student = new JavaStudy0611.Student();
     person1.teaching(student);
     person1.cheating(student);
     person1.cheating(student);*/

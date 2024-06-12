@@ -1,3 +1,5 @@
+package JavaStudy0611;
+
 public class BankAccount {
   private String accountNumber;
   private String ownerName;
