@@ -1,3 +1,3 @@
-package WeeklyQuiz;
+package WeeklyQuiz.sms;
 
 public class Product {}
