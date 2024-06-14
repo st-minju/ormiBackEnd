@@ -1,6 +1,6 @@
 package JavaStudy0613;
 
-public class Test {
+public class InheritanceTest {
   public static void main(String[] args) {
     /*InheritB inheritB = new InheritB();*/
     /*

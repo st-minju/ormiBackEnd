@@ -1,6 +1,6 @@
 package JavaStudy0612;
 
-public class Test {
+public class InheritanceTest {
   public static void main(String[] args) {
 
     /*Person person1 = new Person("민주", 25);

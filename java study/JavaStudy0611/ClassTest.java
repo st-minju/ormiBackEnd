@@ -2,7 +2,7 @@ package JavaStudy0611;
 
 import java.util.Scanner;
 
-public class Test {
+public class ClassTest {
 
   public static void main(String[] args) {
     /*JavaStudy0611.Person person1 = new JavaStudy0611.Person("김민주", 01021211212, 50000, 25);
