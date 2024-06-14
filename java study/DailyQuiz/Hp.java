@@ -1,4 +1,4 @@
-package DailyQuiz0611;
+package DailyQuiz;
 
 public class Hp {
   int hp;

@@ -1,4 +1,4 @@
-package DailyQuiz0611;
+package DailyQuiz;
 
 import java.util.Scanner;
 
