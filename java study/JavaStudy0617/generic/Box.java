@@ -12,6 +12,6 @@ public class Box<T> {
   }
 
   public boolean isIns() {
-    return t instanceof Integer;
+    return t instanceof String;
   }
 }
