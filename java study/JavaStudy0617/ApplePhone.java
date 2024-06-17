@@ -1,0 +1,19 @@
+package JavaStudy0617;
+
+public class ApplePhone implements Phone, Quality {
+
+  @Override
+  public String call() {
+    return "아이폰이 전화를 겁니다.";
+  }
+
+  @Override
+  public String answerThePhone() {
+    return "아이폰으로 전화를 받습니다.";
+  }
+
+  @Override
+  public String good() {
+    return "";
+  }
+}
