@@ -6,11 +6,8 @@ public class Course<T> {
 
   public Course(String name, int capacity) {
     this.name = name;
-    students =
-        (T[])
-            (new Object
-                [capacity]); // 타입 파라미터로 배열을 생성하려면 new T[n] 형태로 배열을 생성할 수 없고 (T[]) (new Object[n])으로
-    // 생성해야한다.
+    students = (T[]) (new Object[capacity]);
+    // 타입 파라미터로 배열을 생성하려면 new T[n] 형태로 배열을 생성할 수 없고 (T[]) (new Object[n])으로 생성해야한다.
   }
 
   public String getName() {

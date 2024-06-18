@@ -11,7 +11,7 @@ public class Clothing extends Product {
   @Override
   public int calculatePrice() {
     if (size.equals("L") || size.equals("XL")) {
-      return (int) (super.getPrice() * 1.1);
+      return (int) ((super.getPrice() * 1.1) / 10 * 10); // 10프로 추가 + 1원짜리 없애기
     }
     return super.calculatePrice();
   }

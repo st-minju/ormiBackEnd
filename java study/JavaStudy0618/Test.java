@@ -1,5 +1,7 @@
 package JavaStudy0618;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 public class Test {
@@ -11,7 +13,7 @@ public class Test {
     compare("1", "2");
     compare("1", "1");*/
 
-    Course<Person> personCourse = new Course<>("일반인", 5);
+    /*Course<Person> personCourse = new Course<>("일반인", 5);
     personCourse.add(new Person("일반인"));
     personCourse.add(new Worker("직장인"));
     personCourse.add(new Student("학생"));
@@ -44,7 +46,15 @@ public class Test {
     System.out.println("=============");
 
     registerCourseWorker(personCourse);
-    registerCourseWorker(workerCourse);
+    registerCourseWorker(workerCourse);*/
+
+    ChildProduct<Tv, String, String> product = new ChildProduct<>();
+    product.setKind(new Tv());
+    product.setModel("smart TV");
+    product.setCompany("Samsung");
+
+    StorageImpl<Tv> tvStorage = new StorageImpl<>(100);
+    tvStorage.add(new Tv(), 0);
   }
 
   public static <T extends Number> int compare(T t1, T t2) {
