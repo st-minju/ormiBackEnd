@@ -11,6 +11,14 @@ public class Food extends Product {
     this.expirationDate = expirationDate;
   }
 
+  public String getExpirationDate() {
+    return expirationDate;
+  }
+
+  public void setExpirationDate(String expirationDate) {
+    this.expirationDate = expirationDate;
+  }
+
   @Override
   public int calculatePrice() {
     // 20240618 같은 형식으로 오늘 날짜 불러오기

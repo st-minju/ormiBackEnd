@@ -8,6 +8,14 @@ public class Electronics extends Product {
     this.brand = brand;
   }
 
+  public String getBrand() {
+    return brand;
+  }
+
+  public void setBrand(String brand) {
+    this.brand = brand;
+  }
+
   @Override
   public int calculatePrice() {
     if (brand.equals("Apple")) {

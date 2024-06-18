@@ -8,6 +8,14 @@ public class Clothing extends Product {
     this.size = size;
   }
 
+  public String getSize() {
+    return size;
+  }
+
+  public void setSize(String size) {
+    this.size = size;
+  }
+
   @Override
   public int calculatePrice() {
     if (size.equals("L") || size.equals("XL")) {
