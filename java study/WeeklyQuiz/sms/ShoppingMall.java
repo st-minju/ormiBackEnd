@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public abstract class ShoppingMall {
   Product[] products;
-  private int addIndex = 0;
+  private int addIndex = 0; // 제품이 추가될 때 마다 증가하는 필드
 
   public ShoppingMall(int arraySize) {
     products = new Product[arraySize];
@@ -14,8 +14,7 @@ public abstract class ShoppingMall {
     return products.length;
   }
 
-  // 제품 추가(addProduct), 제품 삭제(removeProduct), 제품 목록 출력(displayProducts) 기능을 가진 메소드들을 오버로딩으로 생성할 것
-
+  // 제품 추가(addProduct)
   public void addProduct(Product product) {
     if (addIndex >= products.length) {
       makeArrayBigger();
@@ -24,11 +23,32 @@ public abstract class ShoppingMall {
     addIndex++;
   }
 
+  // 제품 삭제(removeProduct)
   public void removeProduct(Product product) {
     int removeIndex = -1;
-    if (Arrays.asList(products).contains(product)) {
+    if (Arrays.asList(products)
+        .contains(
+            product)) { // 매개변수로 받은 객체가 products에 존재하는지 확인 -> for문으로 확인하지 않고 products를 List로 변환시켜
+      // 확인함
       for (int i = 0; i < addIndex; i++) {
-        if (products[i].getName().equals(product.getName())) {
+        if (products[i].getName().equals(product.getName())
+            && products[i].getPrice() == product.getPrice()
+            && products[i].getStock() == product.getStock()
+            && ((products[i] instanceof Clothing
+                    && product instanceof Clothing
+                    && ((Clothing) products[i]).getSize().equals(((Clothing) product).getSize()))
+                || (products[i] instanceof Electronics
+                    && product instanceof Electronics
+                    && ((Electronics) products[i])
+                        .getBrand()
+                        .equals(((Electronics) product).getBrand()))
+                || (products[i] instanceof Food
+                    && product instanceof Food
+                    && ((Food) products[i])
+                        .getExpirationDate()
+                        .equals(
+                            ((Food) product)
+                                .getExpirationDate())))) { // 배열의 객체와 매개변수 객체가 같은 것을 찾아 제거
           if (removeIndex == -1) {
             removeIndex = i;
           }
@@ -41,6 +61,7 @@ public abstract class ShoppingMall {
     }
   }
 
+  // 오버로딩
   public void removeProduct(String name) {
     int removeIndex = -1, removeSize = 0;
     for (Product product : products) {
@@ -61,6 +82,7 @@ public abstract class ShoppingMall {
     }
   }
 
+  // 제품 목록 출력(displayProducts)
   public void displayProducts() {
     for (int i = 0; i < products.length; i++) {
       if (products[i] != null) {
@@ -94,8 +116,8 @@ public abstract class ShoppingMall {
     products = Arrays.copyOf(temp, temp.length * 2);
   }
 
+  // 삭제된 인덱스 위치 채우기
   void arrangeArray(int removeIndex) {
-    // 삭제된 인덱스 위치 채우기
     for (int i = removeIndex; i < products.length; i++) {
       for (int j = i + 1; j < products.length; j++) {
         if (products[j] != null) {

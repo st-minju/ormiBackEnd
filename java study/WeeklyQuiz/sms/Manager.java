@@ -49,9 +49,17 @@ public class Manager {
     System.out.println("checkOrderAvailability = " + premiumShoppingMall.checkOrderAvailability());
     System.out.println("");
 
+    System.out.println("***** removeProduct(electronics1) 실행 *****");
+    premiumShoppingMall.removeProduct(electronics1);
+    System.out.println("현재 배열 크기는 " + premiumShoppingMall.getArraySize());
+    premiumShoppingMall.displayProducts();
+    System.out.println("checkOrderAvailability = " + premiumShoppingMall.checkOrderAvailability());
+    System.out.println("");
+
     System.out.println("***** addProduct() 실행 -> 인덱싱이 잘 수행되는지 확인! *****");
     premiumShoppingMall.addProduct(new Food("Bread", 5000, 5, "20240701"));
     premiumShoppingMall.addProduct(new Food("Bread", 3000, 15, "20240705"));
+    premiumShoppingMall.addProduct(new Electronics("Laptop", 2000000, 30, "Samsung"));
     System.out.println("현재 배열 크기는 " + premiumShoppingMall.getArraySize());
     premiumShoppingMall.displayProducts();
     System.out.println("checkOrderAvailability = " + premiumShoppingMall.checkOrderAvailability());
