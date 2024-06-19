@@ -24,28 +24,39 @@ public abstract class ShoppingMall {
     addIndex++;
   }
 
-  public void removeProduct(Product product, String name) {
-    int[] removeIndexs = new int[products.length];
-    Arrays.fill(removeIndexs, -1);
-    int removeIndex = 0;
+  public void removeProduct(Product product) {
+    int removeIndex = -1;
     if (Arrays.asList(products).contains(product)) {
       for (int i = 0; i < addIndex; i++) {
-        if (products[i].getName().equals(name)) {
+        if (products[i].getName().equals(product.getName())) {
+          if (removeIndex == -1) {
+            removeIndex = i;
+          }
           products[i] = null;
-          removeIndexs[removeIndex] = i;
-          removeIndex++;
           addIndex--;
+          break;
         }
       }
-      // 삭제된 인덱스 위치 채우기
-      int index = 0;
-      while (removeIndexs[index] >= 0) {
-        for (int i = removeIndexs[index]; i < removeIndexs[index + 1]; i++) {
-          if (products[i] != null) {
-            products[i] = products[index + 1];
+      arrangeArray(removeIndex);
+    }
+  }
+
+  public void removeProduct(String name) {
+    int removeIndex = -1, removeSize = 0;
+    for (Product product : products) {
+      if (product.getName().equals(name)) {
+        for (int i = 0; i < addIndex; i++) {
+          if (products[i].getName().equals(name)) {
+            if (removeIndex == -1) {
+              removeIndex = i;
+            }
+            products[i] = null;
+            removeSize++;
           }
         }
-        index++;
+        addIndex -= removeSize;
+        arrangeArray(removeIndex);
+        break;
       }
     }
   }
@@ -81,5 +92,18 @@ public abstract class ShoppingMall {
   void makeArrayBigger() {
     Product[] temp = products;
     products = Arrays.copyOf(temp, temp.length * 2);
+  }
+
+  void arrangeArray(int removeIndex) {
+    // 삭제된 인덱스 위치 채우기
+    for (int i = removeIndex; i < products.length; i++) {
+      for (int j = i + 1; j < products.length; j++) {
+        if (products[j] != null) {
+          products[i] = products[j];
+          products[j] = null;
+          break;
+        }
+      }
+    }
   }
 }

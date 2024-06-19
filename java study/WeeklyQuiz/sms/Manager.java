@@ -27,21 +27,38 @@ public class Manager {
     premiumShoppingMall.addProduct(food2);
     premiumShoppingMall.addProduct(food3);
 
+    System.out.println("***** 초기 상태 *****");
     System.out.println("현재 배열 크기는 " + premiumShoppingMall.getArraySize());
     premiumShoppingMall.displayProducts();
     System.out.println("checkOrderAvailability = " + premiumShoppingMall.checkOrderAvailability());
-    System.out.println("============");
+    System.out.println("");
 
+    System.out.println("***** addProduct() 실행 *****");
     premiumShoppingMall.addProduct(new Food("Chicken", 35000, 7, "20240630"));
-    premiumShoppingMall.addProduct(new Food("Chicken", 25000, 5, "20240701"));
-    premiumShoppingMall.addProduct(new Food("Chicken", 35000, 10, "20240620"));
+    premiumShoppingMall.addProduct(new Food("Bread", 5000, 5, "20240701"));
     System.out.println("현재 배열 크기는 " + premiumShoppingMall.getArraySize());
     premiumShoppingMall.displayProducts();
     System.out.println("checkOrderAvailability = " + premiumShoppingMall.checkOrderAvailability());
-    System.out.println("============");
+    System.out.println("");
 
-    // 제거 메서드 실행 -> 전체가 다 안지워지는 이슈, 인덱스 앞으로 안당겨지는 이슈 수정하기
-    premiumShoppingMall.removeProduct(food3, "Chicken");
+    // 오버로딩
+    System.out.println("***** removeProduct(food1) 실행 *****");
+    premiumShoppingMall.removeProduct(food1);
+    System.out.println("현재 배열 크기는 " + premiumShoppingMall.getArraySize());
+    premiumShoppingMall.displayProducts();
+    System.out.println("checkOrderAvailability = " + premiumShoppingMall.checkOrderAvailability());
+    System.out.println("");
+
+    System.out.println("***** addProduct() 실행 -> 인덱싱이 잘 수행되는지 확인! *****");
+    premiumShoppingMall.addProduct(new Food("Bread", 5000, 5, "20240701"));
+    premiumShoppingMall.addProduct(new Food("Bread", 3000, 15, "20240705"));
+    System.out.println("현재 배열 크기는 " + premiumShoppingMall.getArraySize());
+    premiumShoppingMall.displayProducts();
+    System.out.println("checkOrderAvailability = " + premiumShoppingMall.checkOrderAvailability());
+    System.out.println("");
+
+    System.out.println("***** removeProduct(Chicken) 실행 *****");
+    premiumShoppingMall.removeProduct("Chicken");
     System.out.println("현재 배열 크기는 " + premiumShoppingMall.getArraySize());
     premiumShoppingMall.displayProducts();
     System.out.println("checkOrderAvailability = " + premiumShoppingMall.checkOrderAvailability());
