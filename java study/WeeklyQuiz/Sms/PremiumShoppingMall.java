@@ -1,4 +1,4 @@
-package WeeklyQuiz.sms;
+package WeeklyQuiz.Sms;
 
 public class PremiumShoppingMall extends ShoppingMall {
 

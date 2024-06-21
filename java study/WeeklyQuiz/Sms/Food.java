@@ -1,4 +1,4 @@
-package WeeklyQuiz.sms;
+package WeeklyQuiz.Sms;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
