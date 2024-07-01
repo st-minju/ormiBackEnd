@@ -21,21 +21,28 @@ public class SpringStudyApplication {
 
     // SpringApplication.run(SpringStudyApplication.class, args);
 
-    Singleton singleton = Singleton.getInstance();
-    Singleton singleton1 = Singleton.getInstance();
-    Singleton singleton2 = Singleton.getInstance();
+    /*Singleton singleton = Singleton.getInstance();
+        Singleton singleton1 = Singleton.getInstance();
+        Singleton singleton2 = Singleton.getInstance();
 
-    System.out.println(singleton);
-    System.out.println("====================================");
-    System.out.println(singleton1);
-    System.out.println("====================================");
-    System.out.println(singleton2);
-
+        System.out.println(singleton);
+        System.out.println("====================================");
+        System.out.println(singleton1);
+        System.out.println("====================================");
+        System.out.println(singleton2);
+    */
     /*System.out.println("====================================");
     Singleton singleton3 = new Singleton();
     System.out.println(singleton3);
     System.out.println("====================================");
     Singleton singleton4 = new Singleton();
     System.out.println(singleton4);*/
+
+    /*EmailService emailService = new EmailService(new SmtpEmailSender());
+    EmailService emailService1 = new EmailService(new AwsSesEmailSender());
+
+    emailService.sendEmail("제니", "지수", "hi!");
+    emailService1.sendEmail("로제", "리사", "hello!");*/
+
   }
 }
