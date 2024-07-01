@@ -44,5 +44,14 @@ public class SpringStudyApplication {
     emailService.sendEmail("제니", "지수", "hi!");
     emailService1.sendEmail("로제", "리사", "hello!");*/
 
+    User model = new User("김민주", "hi@gmail.com", 25);
+    UserView userView = new UserView();
+    UserController userController = new UserController(model, userView);
+
+    userController.updateView();
+    System.out.println(" ");
+    userController.setUserName("바라바라밤");
+    userController.setUserAge(20);
+    userController.updateView();
   }
 }
