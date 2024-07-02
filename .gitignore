@@ -140,3 +140,4 @@ gradle-app.setting
 .out/
 
 ormi.iml
+*.iml
