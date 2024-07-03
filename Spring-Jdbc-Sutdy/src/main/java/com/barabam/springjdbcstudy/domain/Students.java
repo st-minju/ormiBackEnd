@@ -1,4 +1,4 @@
-package com.barabam.springjdbcsutdy.domain;
+package com.barabam.springjdbcstudy.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,9 +9,15 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Student {
-  private int id;
+public class Students {
+  private long id;
   private String name;
   private int age;
   private String address;
+
+  public Students(String name, int age, String address) {
+    this.name = name;
+    this.age = age;
+    this.address = address;
+  }
 }

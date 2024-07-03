@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.barabam.springjdbcstudy.repository.StudentMapper">
+
+    <select id="countStudents" resultType="int">
+        SELECT count(*)
+        FROM students;
+    </select>
+
+    <select id="findStudents" resultType="Students">
+        SELECT id, name, age, address
+        FROM students
+        <where>
+            <if test="id != null and id != ''">
+                id = #{id}
+            </if>
+        </where>
+    </select>
+
+    <insert id="saveStudents" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO students (name, age, address)
+        VALUES (#{name}, #{age}, #{address})
+    </insert>
+
+</mapper>

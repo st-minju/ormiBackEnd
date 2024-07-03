@@ -1,0 +1,21 @@
+### POST request to example server
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "name": "카리나",
+  "age": 24,
+  "address": "서울시"
+}
+
+###
+
+### GET
+GET http://localhost:8080/students
+
+###
+
+### GET
+GET http://localhost:8080/students/count
+
+###
