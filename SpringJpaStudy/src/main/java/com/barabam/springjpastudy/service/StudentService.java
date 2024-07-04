@@ -20,4 +20,8 @@ public class StudentService {
   public List<Students> selectStudentsByName(String studentName) {
     return studentRepository.findByName(studentName);
   }
+
+  public Students insertStudent(Students students) {
+    return studentRepository.save(students);
+  }
 }
