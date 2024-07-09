@@ -1,7 +1,5 @@
 package com.barabam.springstudy.study0628;
 
-import java.util.Calendar;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 public class AwsSesEmailSender implements EmailSender {
 
@@ -11,7 +9,7 @@ public class AwsSesEmailSender implements EmailSender {
     System.out.println("Sending AWS SES email to " + to);
   }
 
-  @SpringBootApplication
+  /*@SpringBootApplication
   public static class Main {
     public static void main(String[] args) {
       Quiz quiz = new Quiz();
@@ -27,5 +25,5 @@ public class AwsSesEmailSender implements EmailSender {
       QuizController quizController = new QuizController(quiz, view);
       quizController.StartQuiz();
     }
-  }
+  }*/
 }
