@@ -4,8 +4,11 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-@SpringBootApplication(scanBasePackages = "com.barabam.springstudy.study0709.noMain")
+@SpringBootApplication(
+    exclude = {DataSourceAutoConfiguration.class},
+    scanBasePackages = "com.barabam.springstudy.study0709")
 public class SpringStudyApplication {
 
   @Value("${server.port}")
