@@ -9,7 +9,11 @@ public class ThymeleafController {
 
   @GetMapping("/index")
   public String index(Model model) {
-    model.addAttribute("name", "굿굿베리굿");
+    model.addAttribute("name", "김민주");
+    model.addAttribute("age", "25");
+    model.addAttribute("address", "경기도");
+    model.addAttribute("mbti", "ESTP");
+    model.addAttribute("food", "떡볶이");
     return "index";
   }
 }

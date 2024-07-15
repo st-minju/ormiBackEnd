@@ -5,7 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<h1>스프링부트 타임리프 홈페이지 테스트</h1>
-<p th:text="${name}">메세지가 표시됩니다.</p>
+<h1>자기소개 페이지</h1>
+<p th:text="'이름: '+ ${name}">메세지가 표시됩니다.</p>
+<p th:text="'나이: '+ ${age}">메세지가 표시됩니다.</p>
+<p th:text="'사는 곳: '+ ${address}">메세지가 표시됩니다.</p>
+<p th:text="'MBTI: '+ ${mbti}">메세지가 표시됩니다.</p>
+<p th:text="'좋아하는 음식: '+ ${food}">메세지가 표시됩니다.</p>
 </body>
 </html>
