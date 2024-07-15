@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1> Users List</h1>
+<p> 접속하고자 하는 사용자의 이름을 클릭하세요!</p>
+<table>
+    <thead>
+    <tr>
+        <th>name</th>
+        <th>email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.username}" th:name = "${user.username}" th:onclick="checkAdmin(this.getAttribute('name'))"></td>
+        <td th:text="${user.email}"></td>
+        <td class="admin" th:if="${user.isAdmin}">
+            <a th:id="${user.username}+'link'" class="link" style="display:none"> 관리자 메뉴 </a>
+        </td>
+        <td class="admin" th:unless="${user.isAdmin}">
+            <a th:id="${user.username}+'link'" class="link" style="display:none"> 일반 사용자 메뉴 </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<a th:href="@{/users/form}">새로운 사용자 추가하러 가기</a>
+<a th:href="@{/index}">처음으로 가기</a>
+</body>
+<script>
+    function checkAdmin(name) {
+        let links = document.querySelectorAll('.link');
+        links.forEach((link) => {
+            if(!link.id.match(name))
+                link.style.display="none";
+            else
+                link.style.display="unset";
+        });
+    }
+</script>
+</html>

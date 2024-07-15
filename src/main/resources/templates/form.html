@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>새 글 작성</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<h1>새 사용자 등록</h1>
+<form th:action="@{/users/new}" th:object="${user}" method="post">
+    <div>
+        <label for="username">사용자 이름</label>
+        <input type="text" th:field="*{username}" />
+    </div>
+    <div>
+        <label for="email">사용자 이메일</label>
+        <input type="text" th:field="*{email}" />
+    </div>
+    <div>
+        <label for="password">사용자 패스워드</label>
+        <input type="text" th:field="*{password}" />
+    </div>
+    <button type="submit">저장</button>
+</form>
+<a th:href="@{/index}">처음으로 가기</a>
+<a th:href="@{/users}">뒤로 가기</a>
+</body>
+</html>

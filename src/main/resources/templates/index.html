@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
 </head>
 <body>
 <h1>Hello, Thymeleaf!</h1>
+<a th:href="@{/users}">유저 정보 보러가기</a>
+<a th:href="@{/products}">물건 정보 보러가기</a>
 </body>
 </html>
