@@ -82,3 +82,18 @@ form button[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
 }
+
+.ud_btn {
+    border: none;
+    display: flex;
+    align-items: center;
+    width: 160px;
+}
+.ud_btn a,
+.ud_btn form button {
+    margin: 0;
+    padding: 10px 20px;
+}
+.ud_btn a {
+    margin-right: 10px;
+}

@@ -20,6 +20,12 @@
         <td th:text="${book.title}"></td>
         <td th:text="${book.author}"></td>
         <td th:text="${book.publicationYear}"></td>
+        <td class="ud_btn">
+            <a th:href="@{/books/editBook/{id}(id=${book.id})}">수정</a>
+            <form th:action="@{/books/deleteBook/{id}(id=${book.id})}" method="post">
+                <button type="submit" onclick='alert("정말 삭제하시겠습니까?")'>삭제</button>
+            </form>
+        </td>
     </tr>
     </tbody>
 </table>

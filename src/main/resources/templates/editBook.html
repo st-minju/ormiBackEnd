@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>책 정보 수정</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<h1>책 정보 수정</h1>
+<form th:action="@{/books/editBook/{id}(id=${book.id})}" th:object="${book}" method="post">
+    <input type="hidden" th:value="${book.id}" />
+    <div>
+        <label for="title">책 이름</label>
+        <input type="text" id="title" th:field="*{title}" th:value="${book.title}"/>
+    </div>
+    <div>
+        <label for="author">저자</label>
+        <input type="text" id="author" th:field="*{author}" th:value="${book.author}"/>
+    </div>
+    <div>
+        <label for="publicationYear">책 출판 연도</label>
+        <input type="text" id="publicationYear" th:field="*{publicationYear}" th:value="${book.publicationYear}"/>
+    </div>
+    <button type="submit">Update Book</button>
+</form>
+<a th:href="@{/books}">Back to Book List</a>
+</body>
+</html>
