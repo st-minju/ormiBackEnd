@@ -12,7 +12,7 @@
   <p th:if="${user.admin}">이 사람은 관리자 권한이 있습니다.</p>
 
   <p th:if="${user.person}">이 사람은 관리자 권한이 있습니다.:if</p>
-  <p th:unless="${user.person}">이 사람은 관리자 권한이 있습니다.:unless</p>
+  <p th:unless="${user.person}">이 사람은 관리자 권한이 없습니다.:unless</p>
 </div>
 <ul th:each="item: ${iterData}">
   <li th:text="${item}"></li>
