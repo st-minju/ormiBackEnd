@@ -3,6 +3,7 @@ package net.chimaek.day0717;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,18 +33,25 @@ public class MemberController {
 	}
 
 	@GetMapping("/{id}")
-	public Member getMemberById(@PathVariable long id) {
+	public ResponseEntity<MemberDTO> getMemberById(@PathVariable("id") long id) {
 		// return findMemberById(id);
-		return members.stream()
+		Member member1 = members.stream()
 			.filter(member -> member.getId() == id)
 			.findFirst()
 			.orElseThrow(() -> new IllegalArgumentException("뭐시여 이건. 에러여?"));
+
+		MemberDTO memberDTO = new MemberDTO(member1.getEmail());
+		return ResponseEntity.status(200).body(memberDTO);
 	}
 
 	@PutMapping("/{id}")
 	public Member updateMember(@PathVariable("id") long id, @RequestBody Member updateMember) {
 		// Member member = findMemberById(id);
-		Member member = getMemberById(id);
+		Member member = members.stream()
+			.filter(m -> m.getId() == id)
+			.findFirst()
+			.orElseThrow(() -> new IllegalArgumentException("뭐시여 이건. 에러여?"));
+
 		member.setName(updateMember.getName());
 		member.setEmail(updateMember.getEmail());
 
@@ -53,14 +61,6 @@ public class MemberController {
 	@DeleteMapping("/{id}")
 	public void deleteMember(@PathVariable("id") long id) {
 		members.removeIf(member -> member.getId() == id);
-	}
-
-
-	private Member findMemberById(long id) {
-		return members.stream()
-			.filter(m -> m.getId() == id)
-			.findFirst()
-			.orElseThrow(() -> new IllegalArgumentException("해당 아이디의 멤버를 찾지 못했습니다."));
 	}
 
 }
