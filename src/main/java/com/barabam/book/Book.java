@@ -1,4 +1,4 @@
-package com.barabam.dailyquiz;
+package com.barabam.book;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,10 +9,9 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
-	private Long id;
-	private String username;
-	private String email;
-	private boolean isAdmin;
-	private String password;
+public class Book {
+	private long id;
+	private String title;
+	private String author;
+	private int publicationYear;
 }

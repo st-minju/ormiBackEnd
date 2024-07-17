@@ -1,4 +1,4 @@
-package com.barabam.dailyquiz;
+package com.barabam.book;
 
 import java.util.ArrayList;
 import java.util.List;

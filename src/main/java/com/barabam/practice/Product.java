@@ -1,4 +1,4 @@
-package com.barabam.dailyquiz;
+package com.barabam.practice;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
