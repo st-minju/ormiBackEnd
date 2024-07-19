@@ -16,6 +16,7 @@ public class BoardPostService {
 	private Long nextPostId = 1L;
 	private Long nextCommentId = 1L;
 
+	@LogExecutionTime
 	public BoardPostDTO createBoardPost(BoardPostDTO boardPostDTO) {
 		BoardPost boardPost = convertToBoardPostEntity(boardPostDTO);
 		boardPost.setId(nextPostId++);
