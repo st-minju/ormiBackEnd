@@ -14,6 +14,7 @@ public class BoardPostService {
   private Long nextPostId = 1L;
   private Long nextCommentId = 1L;
 
+  @LogExecutionTime
   public BoardPostDTO createBoardPost(BoardPostDTO boardPostDTO) {
     BoardPost boardPost = convertToBoardPostEntity(boardPostDTO);
     boardPost.setId(nextPostId++);
@@ -23,9 +24,7 @@ public class BoardPostService {
   }
 
   public List<BoardPostDTO> getAllBoardPosts() {
-    return boardPosts.stream()
-        .map(this::convertToBoardPostDTO)
-        .collect(Collectors.toList());
+    return boardPosts.stream().map(this::convertToBoardPostDTO).collect(Collectors.toList());
   }
 
   public BoardPostDTO getBoardPostDtoById(Long id) {
@@ -35,7 +34,6 @@ public class BoardPostService {
         .map(this::convertToBoardPostDTO)
         .findFirst()
         .orElseThrow(() -> new IllegalArgumentException("해당하는 아이디의 글을 찾을 수 없습니다."));
-
   }
 
   public void deleteBoardPost(Long id) {
@@ -66,12 +64,15 @@ public class BoardPostService {
     boardPost.setContent(boardPostDTO.getContent());
     boardPost.setAuthor(boardPostDTO.getAuthor());
 
-    if(boardPostDTO.getComments() != null) {
-      boardPostDTO.getComments().forEach(commentDTO -> {
-        Comment comment = convertToCommentEntity(commentDTO);
-        comment.setBoardPost(boardPost);
-        boardPost.addComment(comment);
-      });
+    if (boardPostDTO.getComments() != null) {
+      boardPostDTO
+          .getComments()
+          .forEach(
+              commentDTO -> {
+                Comment comment = convertToCommentEntity(commentDTO);
+                comment.setBoardPost(boardPost);
+                boardPost.addComment(comment);
+              });
     }
     return boardPost;
   }
@@ -93,10 +94,9 @@ public class BoardPostService {
     boardPostDTO.setCreatedAt(boardPost.getCreatedAt());
     boardPostDTO.setUpdatedAt(boardPost.getUpdatedAt());
 
-    if(boardPost.getComments() != null) {
+    if (boardPost.getComments() != null) {
       boardPostDTO.setComments(
-          boardPost.getComments()
-              .stream()
+          boardPost.getComments().stream()
               .map(BoardPostService::convertToCommentDTO)
               .collect(Collectors.toList()));
     }
