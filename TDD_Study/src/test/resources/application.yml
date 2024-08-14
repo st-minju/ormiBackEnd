@@ -2,9 +2,9 @@ spring:
   application:
     name: spring_tdd
   datasource:
-    url: jdbc:mysql://localhost:3306/spring_tdd?useSSL=false&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3306/test_db?useSSL=false&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
     username: root
-    password: root
+    password: '0000'
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
